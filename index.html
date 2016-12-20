@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Awesome Form Labels</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<h1 class="title text-center">Awesome Form labels</h1>
+	<hr class="title-rule">
+	<form action="#" id="awesome-form">
+		<div class="input-group">
+			<input type="text" name="name" id="uname">
+			<label for="uname">Your Name</label>
+		</div>
+
+		<div class="input-group">
+			<input type="password" name="password" id="pwd">
+			<label for="pwd">Your Password</label>
+		</div>
+
+		<input type="submit" value="Log In">
+	</form>
+	
+	<h3 class="website-link-heading">Crafted with <span id="love"> 💟 </span> by <a href="http://www.srithan.me" class="website-link">Srithan Savela</a></h3>
+	
+	<!-- Link the jquery source file or a CDN. In this case, I am using a compressed jquery 3.1.1 file  -->
+
+	<script src="../jquery-3.1.1.js"></script>
+
+	<!-- Write the jquery code here -->
+	<script>
+		
+	$(document).ready(function() {
+
+		$('#awesome-form .input-group input').focusout(function() {
+
+			var text_val = $(this).val();
+
+			if (text_val === "") {
+
+				$(this).removeClass('has-value');
+
+			} else {
+
+				$(this).addClass('has-value');
+
+			}
+
+		});
+
+	});
+
+	</script>
+</body>
+</html>
